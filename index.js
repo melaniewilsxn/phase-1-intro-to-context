@@ -11,9 +11,12 @@ function  createEmployeeRecord(employeeRecordArray){
 }
 
 function createEmployeeRecords(employeeRecordsArray){
-    const employeeRecordsObjArray = []
-    employeeRecordsArray.forEach(employeeRecordArray => employeeRecordsObjArray.push(createEmployeeRecord(employeeRecordArray)))
-    return employeeRecordsObjArray;
+    let employeeRecords = employeeRecordsArray.map(createEmployeeRecord)
+    return employeeRecords;
+    
+    // const employeeRecordsObjArray = []
+    // employeeRecordsArray.forEach(employeeRecordArray => employeeRecordsObjArray.push(createEmployeeRecord(employeeRecordArray)))
+    // return employeeRecordsObjArray;
 }
 
 function createTimeInEvent(employeeRecordObj, date){
